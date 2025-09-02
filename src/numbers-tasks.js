@@ -237,11 +237,11 @@ function isPrime(n) {
 
 function toNumber(value, def) {
   const num = Number(value);
-  return isNaN(num) ? def : num;
+  return Number.isNaN(num) ? def : num;
 }
 
 /**
- * Returns the cube of the given number.
+ * 13.Returns the cube of the given number.
  *
  * @param {number} num
  * @return {number}
@@ -256,7 +256,7 @@ function getCube(num) {
 }
 
 /**
- * Returns the Fibonacci number located at the index position.
+ * 14. Returns the Fibonacci number located at the index position.
  *
  * @param {number} index
  * @return {number}
@@ -267,13 +267,24 @@ function getCube(num) {
  *   2  => 1
  *   3  => 2
  *   10 => 55
- */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+ *
+ * F(n) = F(n - 1) + F(n - 2) */
+function getFibonacciNumber(index) {
+  if (index === 0) return 0;
+  if (index === 1) return 1;
+
+  let a = 0;
+  let b = 1;
+  for (let i = 2; i <= index; i += 1) {
+    const next = a + b;
+    a = b;
+    b = next;
+  }
+  return b;
 }
 
 /**
- * Returns the sum of all numbers from 1 to n.
+ * 15.Returns the sum of all numbers from 1 to n.
  *
  * @param {number} n
  * @return {number}
@@ -283,12 +294,16 @@ function getFibonacciNumber(/* index */) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i += 1) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
- * Returns the sum of the digits of a given number.
+ * 16.Returns the sum of the digits of a given number.
  *
  * @param {number} num
  * @return {number}
@@ -298,12 +313,17 @@ function getSumToN(/* n */) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  let sum = 0;
+  const str = num.toString();
+  for (let i = 0; i < str.length; i += 1) {
+    sum += Number(str[i]);
+  }
+  return sum;
 }
 
 /**
- * Returns true if the given number is a power of two, false otherwise.
+ * 17. Returns true if the given number is a power of two, false otherwise.
  *
  * @param {number} num
  * @return {boolean}
