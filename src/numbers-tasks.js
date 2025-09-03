@@ -645,8 +645,15 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  return Math.floor((number + 1) / 2);
+  if (number === 0) return 0;
+  return Math.floor((Math.abs(number) + 1) / 2);
 }
+console.log(getCountOfOddNumbers(4));
+console.log(getCountOfOddNumbers(5));
+console.log(getCountOfOddNumbers(10));
+console.log(getCountOfOddNumbers(15));
+console.log(getCountOfOddNumbers(0));
+console.log(getCountOfOddNumbers(-5));
 
 module.exports = {
   getRectangleArea,
