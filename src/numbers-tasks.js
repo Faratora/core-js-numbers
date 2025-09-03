@@ -628,11 +628,11 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  return Math.sqrt(a * a + b * b);
+  return Math.hypot(a, b);
 }
 
 /**
- * Returns count of odd numbers from zero to the resulting number.
+ * 37. Returns count of odd numbers from zero to the resulting number.
  * The resulting number is taken into account.
  *
  * @param {number} number
@@ -644,8 +644,8 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  return Math.floor((number + 1) / 2);
 }
 
 module.exports = {
