@@ -523,7 +523,7 @@ function roundToSmallestInteger(number) {
 }
 
 /**
- * Returns the largest integer greater than or equal to a given number.
+ * 30. Returns the largest integer greater than or equal to a given number.
  *
  * @param {number} number
  * @return {number}
@@ -531,9 +531,10 @@ function roundToSmallestInteger(number) {
  * @example:
  * 5.1  => 6
  * -5.9 => -5
+ * Метод Math.ceil() - округление вверх. Округляет аргумент до ближайшего большего целого.
  */
-function roundToLargestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToLargestInteger(number) {
+  return Math.ceil(number);
 }
 
 /**
