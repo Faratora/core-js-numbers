@@ -554,7 +554,7 @@ function roundToNearestInteger(number) {
 }
 
 /**
- * Returns the integer part of a number by removing any fractional digits.
+ * 32. Returns the integer part of a number by removing any fractional digits.
  *
  * @param {number} number
  * @return {number}
@@ -563,9 +563,10 @@ function roundToNearestInteger(number) {
  * 5.5  => 5
  * 5.4  => 5
  * -5.5 => -5
+ * Функция Math.trunc() возвращает целую часть числа путём удаления всех дробных знаков.
  */
-function getIntegerPartNumber(/* number */) {
-  throw new Error('Not implemented');
+function getIntegerPartNumber(number) {
+  return Math.trunc(number);
 }
 
 /**
