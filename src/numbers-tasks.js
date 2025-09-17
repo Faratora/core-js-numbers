@@ -164,7 +164,7 @@ function getParallelepipedDiagonal(a, b, c) {
 }
 
 /**
- * Returns the number rounded to specified power of 10.
+ * 10 Returns the number rounded to specified power of 10.
  *
  * @param {number} num
  * @param {number} pow
@@ -180,12 +180,13 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  const result = 10 ** pow;
+  return Math.round(num / result) * result;
 }
 
 /**
- * Returns true is the number is prime; otherwise false.
+ * 11.Returns true is the number is prime; otherwise false.
  * See: https://en.wikipedia.org/wiki/Primality_test
  *
  * @param {number} n
