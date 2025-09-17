@@ -426,9 +426,9 @@ function toPrecision(number, precision) {
  */
 function getNumberValue(number) {
   return typeof number === 'object' ? number.valueOf() : number;
-
+}
 /**
- * Returns a boolean value indicating whether the parameter is a number or not.
+ * 24. Returns a boolean value indicating whether the parameter is a number or not.
  *
  * @param {number} number
  * @return {boolean}
@@ -442,8 +442,8 @@ function getNumberValue(number) {
  * 5        => true
  * '5'      => false
  */
-function isNumber(/* number */) {
-  throw new Error('Not implemented');
+function isNumber(number) {
+  return typeof number === 'number' && Number.isFinite(number);
 }
 
 /**
