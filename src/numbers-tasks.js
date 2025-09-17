@@ -447,7 +447,7 @@ function isNumber(number) {
 }
 
 /**
- * Returns a boolean value indicating whether a number is an integer or not.
+ * 25. Returns a boolean value indicating whether a number is an integer or not.
  *
  * @param {number} number
  * @return {boolean}
@@ -457,8 +457,8 @@ function isNumber(number) {
  * 5.1  => false
  * '5'  => false
  */
-function isInteger(/* number */) {
-  throw new Error('Not implemented');
+function isInteger(number) {
+  return Number.isInteger(number);
 }
 
 /**
