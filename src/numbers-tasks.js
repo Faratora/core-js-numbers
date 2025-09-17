@@ -538,7 +538,7 @@ function roundToLargestInteger(number) {
 }
 
 /**
- * Returns the value of a number rounded to the nearest integer.
+ * 31. Returns the value of a number rounded to the nearest integer.
  *
  * @param {number} number
  * @return {number}
@@ -547,9 +547,10 @@ function roundToLargestInteger(number) {
  * 5.5  => 6
  * 5.4  => 5
  * -5.5 => -5
+ * Метод Math.round() возвращает число, округлённое к ближайшему целому.
  */
-function roundToNearestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToNearestInteger(number) {
+  return Math.round(number);
 }
 
 /**
