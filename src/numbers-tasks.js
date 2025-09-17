@@ -355,7 +355,7 @@ function getSine(num) {
 }
 
 /**
- * Returns a string representation of a number in a specified base (radix).
+ * 19. Returns a string representation of a number in a specified base (radix).
  *
  * @param {number} number
  * @param {number} base
@@ -365,12 +365,12 @@ function getSine(num) {
  * 255, 16 => 'ff'
  * 2, 2    => '10'
  */
-function numberToStringInBase(/* number, base */) {
-  throw new Error('Not implemented');
+function numberToStringInBase(number, base) {
+  return number.toString(base);
 }
 
 /**
- * Returns a string representation of a number in exponential notation.
+ * 20. Returns a string representation of a number in exponential notation.
  *
  * @param {number} number
  * @param {number} fractionDigits
