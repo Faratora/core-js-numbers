@@ -509,7 +509,7 @@ function isSafeInteger(number) {
 }
 
 /**
- * Returns the smallest integer less than or equal to a given number.
+ * 29. Returns the smallest integer less than or equal to a given number.
  *
  * @param {number} number
  * @return {number}
@@ -518,8 +518,8 @@ function isSafeInteger(number) {
  * 5.9  => 5
  * -5.1 => -6
  */
-function roundToSmallestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToSmallestInteger(number) {
+  return Math.floor(number);
 }
 
 /**
