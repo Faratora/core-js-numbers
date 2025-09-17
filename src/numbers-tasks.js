@@ -633,7 +633,7 @@ function getHypotenuse(a, b) {
 }
 
 /**
- * Returns count of odd numbers from zero to the resulting number.
+ * 37. Returns count of odd numbers from zero to the resulting number.
  * The resulting number is taken into account.
  *
  * @param {number} number
@@ -644,9 +644,12 @@ function getHypotenuse(a, b) {
  * 5  => 3
  * 10 => 5
  * 15 => 8
+ * Метод Math.floor() - округление вниз. Округляет аргумент до ближайшего меньшего целого.
+ * Метод Math.abs() возвращает абсолютное значение числа
  */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  if (number === 0) return 0;
+  return Math.floor((Math.abs(number) + 1) / 2);
 }
 
 module.exports = {
