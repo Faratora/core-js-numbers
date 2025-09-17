@@ -240,7 +240,7 @@ function toNumber(value, def) {
 }
 
 /**
- * Returns the cube of the given number.
+ * 13.Returns the cube of the given number.
  *
  * @param {number} num
  * @return {number}
@@ -250,8 +250,8 @@ function toNumber(value, def) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(num) {
+  return num ** 3;
 }
 
 /**
