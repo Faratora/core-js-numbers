@@ -476,7 +476,7 @@ function getFloatOnString(str) {
 }
 
 /**
- * Returns an integer of the specified base or, if the number cannot be parsed
+ * 27. Returns an integer of the specified base or, if the number cannot be parsed
  * from the argument, returns NaN.
  *
  * @param {string} str
@@ -489,8 +489,8 @@ function getFloatOnString(str) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(/* str, base */) {
-  throw new Error('Not implemented');
+function getIntegerOnString(str, base) {
+  return Number.parseInt(str, base);
 }
 
 /**
