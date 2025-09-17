@@ -321,7 +321,7 @@ function getSumOfDigits(num) {
 }
 
 /**
- * Returns true if the given number is a power of two, false otherwise.
+ * 17. Returns true if the given number is a power of two, false otherwise.
  *
  * @param {number} num
  * @return {boolean}
@@ -331,8 +331,13 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  if (num < 1) return false;
+  let current = 1;
+  while (current < num) {
+    current *= 2;
+  }
+  return current === num;
 }
 
 /**
