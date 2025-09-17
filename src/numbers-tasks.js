@@ -618,7 +618,7 @@ function getRandomInteger(min, max) {
 }
 
 /**
- * Returns the length of the hypotenuse of a right triangle.
+ * 36. Returns the length of the hypotenuse of a right triangle.
  *
  * @param {number} a
  * @param {number} b
@@ -626,9 +626,10 @@ function getRandomInteger(min, max) {
  *
  * @example:
  * 3, 4 => 5
+ * Метод Math.hypot() возвращает квадратный корень суммы квадратов своих аргументов
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  return Math.hypot(a, b);
 }
 
 /**
