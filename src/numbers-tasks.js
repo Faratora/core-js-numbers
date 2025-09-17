@@ -301,7 +301,7 @@ function getSumToN(n) {
 }
 
 /**
- * Returns the sum of the digits of a given number.
+ * 16. Returns the sum of the digits of a given number.
  *
  * @param {number} num
  * @return {number}
@@ -311,8 +311,13 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  let sum = 0;
+  const str = num.toString();
+  for (let i = 0; i < str.length; i += 1) {
+    sum += Number(str[i]);
+  }
+  return sum;
 }
 
 /**
